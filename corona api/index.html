@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 India Tracker</title>
+
+    <!-- Bootstrap -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="./assets/css/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="./assets/css/font.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/weather.png" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container py-5">
+        <h2 class="text-center mb-4 fw-bold display-6">
+            🦠 COVID-19 State Tracker
+        </h2>
+
+
+        <!-- SEARCH -->
+        <div class="d-flex justify-content-center mb-4">
+            <input type="text" id="stateInput" class="form-control w-50 me-2" placeholder="Enter State Name">
+            <button class="btn btn-primary" onclick="getStateData()">Search</button>
+        </div>
+
+        <!-- INFO -->
+        <div id="info" class="text-center text-danger mb-3"></div>
+
+        <!-- DATA -->
+        <div class="row text-center mb-4" id="cards"></div>
+
+        <!-- CHARTS -->
+       <div class="row mt-4 justify-content-center d-none" id="chartSection">
+
+
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="chart-box">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="chart-box">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="./assets/script/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Custom JS -->
+        <script src="./assets/script/script.js"></script>
+</body>
+
+</html>
